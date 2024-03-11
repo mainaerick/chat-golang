@@ -3,7 +3,7 @@ import ChatBody from '../../components/chat_body'
 import { WebsocketContext } from '../../modules/websocket_provider'
 import { useRouter } from 'next/router'
 import { API_URL } from '../../constants'
-// import autosize from 'autosize'
+import autosize from 'autosize'
 import { AuthContext } from '../../modules/auth_provider'
 
 export type Message = {
@@ -48,7 +48,7 @@ const index = () => {
 
   useEffect(() => {
     if (textarea.current) {
-    //   autosize(textarea.current)
+      autosize(textarea.current)
     }
 
     if (conn === null) {
